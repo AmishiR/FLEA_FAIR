@@ -17,7 +17,7 @@ export const StickerCluster: React.FC = () => {
   };
 
   return (
-    <div className="relative w-[300px] h-[350px] md:w-[500px] md:h-[450px]">
+    <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[450px]">
       
       {/* Small Business (base) */}
       <motion.img
