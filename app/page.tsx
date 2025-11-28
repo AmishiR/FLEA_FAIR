@@ -4,6 +4,7 @@ import { Marquee } from '../components/Marquee';
 import { FleaFairLogo } from '../components/FleaFairLogo';
 import { StickerCluster } from '../components/Stickers';
 import { HeroSection } from '../components/HeroSection';
+import QuickLinksFooter from '@/components/footer';
 
 import Sponsors from '../components/Sponsors';
 import Dot from '../components/Dot';
@@ -59,9 +60,13 @@ export default function Page() {
           <div className="w-full lg:w-2/3">
             <GridSection />
           </div>
+          
 
         </main>
       </div>
+      <div>
+            <QuickLinksFooter />
+          </div>
     </div>
   );
 }
