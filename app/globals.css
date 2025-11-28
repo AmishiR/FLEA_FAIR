@@ -33,3 +33,9 @@ body {
 .animate-marquee {
   animation: marquee 18s linear infinite;
 }
+@font-face {
+  font-family: 'Sztos';
+  src: url('/fonts/SztosTest-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
