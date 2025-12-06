@@ -14,9 +14,9 @@ const InfoSection: React.FC = () => {
       {/* Pink Badge Image */}
       <div className="w-full text-[#5a108a] max-w-md relative group cursor-pointer hover:scale-105 transition-transform duration-300">
         <img
-          src="/smallbusiness.png"
+          src="/smbus.png"
           alt="Small Business Badge"
-          className="w-full h-auto drop-shadow-xl transform -rotate-2 rounded-xl"
+          className="w-full h-auto  transform -rotate-2 rounded-xl"
         />
 
         <div className="absolute -top-4 -left-4 text-brand-purple text-4xl animate-bounce">✨</div>

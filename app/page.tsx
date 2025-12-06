@@ -17,56 +17,65 @@ export default function Page() {
       <Marquee />
       <Navbar />
 
-      
-      <main className="flex-grow relative flex flex-col items-start justify-start pt-10 pb-20">
+      {/* Hero Section */}
+      <main className="relative flex flex-col items-start justify-start pt-6 sm:pt-10  sm:pb-16 md:pb-20 lg:pb-32 px-4 sm:px-6 md:px-8 lg:px-12 overflow-visible min-h-[600px] lg:min-h-[700px]">
         <FleaFairLogo />
 
-        <div className="w-full mt-10 relative z-20">
-          <HeroSection />
-        </div>
+        {/* Container for hero and stickers */}
+        <div className="w-full mt-6 sm:mt-8 md:mt-10 relative">
+          {/* Stickers - positioned on the left, overlapping with hero */}
+          <div className="hidden lg:block absolute top-20 left-0 xl:left-10 z-30">
+            <StickerCluster />
+          </div>
 
-        
-        <div className="absolute bottom-70 left-30">
-          <StickerCluster />
+          {/* Hero images */}
+          <div className="relative z-20">
+            <HeroSection />
+          </div>
+
+          {/* Mobile stickers - below hero on small screens */}
+          <div className="block lg:hidden mt-8 flex justify-center">
+            <StickerCluster />
+          </div>
         </div>
       </main>
 
-
-      {/* second*/}
-      <div className="min-h-screen bg-[#F8F7F5] font-sans pb-20 mt-32">
+      {/* Second Section */}
+      <div className="min-h-screen bg-[#F8F7F5] font-sans pb-12 sm:pb-16 md:pb-20 mt-12 sm:mt-20 md:mt-32">
 
         {/* Dotted line */}
-        <div className="pt-8 px-10 max-w-10xl mx-auto">
-          <div className="border-t-4 border-dotted border-pink-400 opacity-60 w-full mb-8"></div>
+        <div className="pt-4 sm:pt-6 md:pt-8 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+          <div className="border-t-2 sm:border-t-4 border-dotted border-pink-400 opacity-60 w-full mb-6 sm:mb-8"></div>
         </div>
 
-       
+        {/* Sponsors */}
         <Sponsors />
 
-       
-        <div className="px-10 max-w-10xl mx-auto">
+        {/* Dot separator */}
+        <div className="px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
           <Dot />
         </div>
 
-       
-        <main className="max-w-10xl mx-auto px-4 md:px-8 flex flex-col lg:flex-row gap-12 lg:gap-20 mt-12">
+        {/* Main content grid */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-20 mt-8 sm:mt-10 md:mt-12">
 
-         
+          {/* Info Section - sidebar */}
           <div className="w-full lg:w-1/3 lg:sticky lg:top-8 h-fit">
             <InfoSection />
           </div>
 
-        
+          {/* Grid Section - main content */}
           <div className="w-full lg:w-2/3">
             <GridSection />
           </div>
-          
 
         </main>
       </div>
+
+      {/* Footer */}
       <div>
-            <QuickLinksFooter />
-          </div>
+        <QuickLinksFooter />
+      </div>
     </div>
   );
 }
