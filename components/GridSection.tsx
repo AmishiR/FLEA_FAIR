@@ -8,7 +8,7 @@ const CITIES = [
   { id: 4, name: "Pune", image: "/city4.png" },
   {id: 5, name: "Raipur", image: "/city5.png" },
   {id: 6, name: "Indore", image: "/city6.png" },
-  // Add as many as you want
+  
 ];
 
 const GridSection: React.FC = () => {

@@ -4,6 +4,8 @@ import { Marquee } from '../components/Marquee';
 import { FleaFairLogo } from '../components/FleaFairLogo';
 import { StickerCluster } from '../components/Stickers';
 import { HeroSection } from '../components/HeroSection';
+import QuickLinksFooter from '@/components/footer';
+import AboutUs from '../components/AboutUs';
 
 import Sponsors from '../components/Sponsors';
 import Dot from '../components/Dot';
@@ -93,7 +95,18 @@ Thank you for being part of this journey.`}
 
   </div>
 </main>
+      <div>
+            <AboutUs/>
       </div>
+</div>
+
+
+      {/* Footer */}
+      <div>
+        <QuickLinksFooter />
+      </div>
+      
     </div>
+
   );
 }
