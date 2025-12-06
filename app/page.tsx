@@ -44,15 +44,20 @@ export default function Page() {
       <div className="min-h-screen bg-[#F8F7F5] font-sans pb-12 sm:pb-16 md:pb-20 mt-12 sm:mt-20 md:mt-32">
 
         {/* Dotted line */}
-        <div className="pt-4 sm:pt-6 md:pt-8 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+        
+        <div className="pt-4 sm:pt-6 md:pt-8  sm:px-6 md:px-10 max-w-7xl mx-auto flex flex-col items-center">
+          <h2 className="text-4xl md:text-6xl  font-black text-brand-purple uppercase tracking-tighter mb-15"> 
+            The Flea Fair Sponors 
+         </h2>
           <div className="border-t-2 sm:border-t-4 border-dotted border-pink-400 opacity-60 w-full mb-6 sm:mb-8"></div>
         </div>
 
         {/* Sponsors */}
         <Sponsors />
-
+          
         {/* Dot separator */}
         <div className="px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+          
           <Dot />
         </div>
 

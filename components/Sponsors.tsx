@@ -4,9 +4,7 @@ import React from 'react';
 const Sponsors: React.FC = () => {
   return (
     <section className="text-center py-8 px-4">
-         <h2 className="text-10xl md:text-8xl font-black text-brand-purple uppercase tracking-tighter mb-15"> 
-            The Flea Fair Sponsors 
-         </h2>
+         
 
       {/* Main Sponsor */}
       <div className="flex justify-center mb-12">
