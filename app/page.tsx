@@ -5,6 +5,7 @@ import { FleaFairLogo } from '../components/FleaFairLogo';
 import { StickerCluster } from '../components/Stickers';
 import { HeroSection } from '../components/HeroSection';
 import QuickLinksFooter from '@/components/footer';
+import AboutUs from '../components/AboutUs';
 
 import Sponsors from '../components/Sponsors';
 import Dot from '../components/Dot';
@@ -68,6 +69,7 @@ export default function Page() {
           <div className="w-full lg:w-1/3 lg:sticky lg:top-8 h-fit">
             <InfoSection />
           </div>
+          
 
           {/* Grid Section - main content */}
           <div className="w-full lg:w-2/3">
@@ -75,6 +77,9 @@ export default function Page() {
           </div>
 
         </main>
+        <div>
+            <AboutUs/>
+          </div>
       </div>
 
       {/* Footer */}
