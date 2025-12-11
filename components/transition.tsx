@@ -3,7 +3,14 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Transition({ isTransitioning, onCovered, onComplete, text = "Loading..." }) {
+interface TransitionProps {
+  isTransitioning: boolean;
+  onCovered?: () => void;
+  onComplete?: () => void;
+  text?: string;
+}
+
+export default function Transition({ isTransitioning, onCovered, onComplete, text = "Loading..." }: TransitionProps) {
   const controls = useAnimation();
   const [mounted, setMounted] = useState(false);
 
@@ -40,7 +47,7 @@ export default function Transition({ isTransitioning, onCovered, onComplete, tex
     <motion.div
       style={{ y: "-100%" }} // ALWAYS start off-screen (SSR and hydration safe)
       animate={controls}
-      className="fixed inset-0 z-[999] flex items-center justify-center bg-brand-pink text-white text-3xl font-bold"
+      className="fixed inset-0 z-999 flex items-center justify-center bg-brand-pink text-white text-3xl font-bold"
     >
       {text}
     </motion.div>

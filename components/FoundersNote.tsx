@@ -84,7 +84,7 @@ export default function Page() {
         <Navbar />
       </motion.div>
 
-      <main className="flex-grow relative flex flex-col items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
+      <main className="grow relative flex flex-col items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
         {/* Logo with slide in from left */}
         <motion.div
           initial="hidden"
@@ -96,7 +96,7 @@ export default function Page() {
 
         {/* Sticker Cluster with scale animation */}
         <motion.div 
-          className="relative w-full mt-5 sm:mt-50 md:mt-8 z-30 md:absolute md:bottom-[250px] md:left-[80px]"
+          className="relative w-full mt-5 sm:mt-50 md:mt-8 z-30 md:absolute md:bottom-[250px] md:left-20"
           initial="hidden"
           animate="visible"
           variants={scaleIn}

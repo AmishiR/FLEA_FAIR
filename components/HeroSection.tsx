@@ -2,14 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-// Animation variants
+// Animation variants with delays to sync with splash screen
 const fadeInScale = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { 
     opacity: 1, 
     scale: 1,
     transition: { 
-      duration: 0.8
+      duration: 0.8,
+      delay: 3
     }
   }
 };
@@ -20,7 +21,8 @@ const slideInRight = {
     opacity: 1, 
     x: 0,
     transition: { 
-      duration: 0.8
+      duration: 0.8,
+      delay: 3
     }
   }
 };
@@ -35,32 +37,19 @@ export const HeroSection: React.FC = () => {
         initial="hidden"
         animate="visible"
         variants={slideInRight}
+        whileHover={{ 
+          scale: 1.05,
+          rotate: 2,
+          transition: { duration: 0.3 }
+        }}
       >
-        <motion.div
-          animate={{
-            y: [0, -15, 0]
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-            delay: 0.8
-          }}
-          whileHover={{ 
-            scale: 1.05,
-            rotate: 2,
-            transition: { duration: 0.3 }
-          }}
-        >
-          <Image
-            src="/hero2.png"
-            alt="Hero Image 2"
-            width={500}
-            height={500}
-            className="rounded-2xl md:rounded-3xl object-cover w-full h-auto"
-          />
-        </motion.div>
+        <Image
+          src="/hero2.png"
+          alt="Hero Image 2"
+          width={500}
+          height={500}
+          className="rounded-2xl md:rounded-3xl object-cover w-full h-auto"
+        />
       </motion.div>
 
       {/* Hero image 1 - Main image with scale in */}
@@ -69,31 +58,19 @@ export const HeroSection: React.FC = () => {
         initial="hidden"
         animate="visible"
         variants={fadeInScale}
+        whileHover={{ 
+          scale: 1.05,
+          rotate: -2,
+          transition: { duration: 0.3 }
+        }}
       >
-        <motion.div
-          animate={{
-            y: [0, -10, 0]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut"
-          }}
-          whileHover={{ 
-            scale: 1.05,
-            rotate: -2,
-            transition: { duration: 0.3 }
-          }}
-        >
-          <Image
-            src="/hero1.png"
-            alt="Hero Image 1"
-            width={569}
-            height={569}
-            className="rounded-2xl md:rounded-3xl object-cover w-full h-auto"
-          />
-        </motion.div>
+        <Image
+          src="/hero1.png"
+          alt="Hero Image 1"
+          width={569}
+          height={569}
+          className="rounded-2xl md:rounded-3xl object-cover w-full h-auto"
+        />
       </motion.div>
 
     </section>

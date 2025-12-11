@@ -114,7 +114,7 @@ export default function Page() {
       {/* Splash Screen */}
       <AnimatePresence>
         {showSplash && (
-          <div className="fixed inset-0 z-[9999]">
+          <div className="fixed inset-0 z-9999">
             {/* First Layer - Blue (exits first) */}
             <motion.div
               className="absolute inset-0 bg-[#0ea5e9] z-30"
@@ -147,7 +147,7 @@ export default function Page() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: showSplash ? 0 : 1 }}
-          transition={{ delay: 3, duration: 0.5 }}
+          transition={{ delay: 2, duration: 0.5 }}
         >
           <Marquee />
         </motion.div>
@@ -156,17 +156,17 @@ export default function Page() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: showSplash ? 0 : 1 }}
-          transition={{ delay: 3, duration: 0.5 }}
+          transition={{ delay: 2, duration: 0.5 }}
         >
           <Navbar />
         </motion.div>
 
-        <main className="flex-grow relative flex flex-col items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
+        <main className="grow relative flex flex-col items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
           {/* Logo with slide in from left */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: showSplash ? 0 : 1, x: showSplash ? -60 : 0 }}
-            transition={{ delay: 3.2, duration: 0.7 }}
+            transition={{ delay: 2.2, duration: 0.7 }}
           >
             <FleaFairLogo />
           </motion.div>
@@ -176,7 +176,7 @@ export default function Page() {
             className="relative w-full mt-5 sm:mt-50 md:mt-8 z-30 md:absolute md:bottom-[250px] md:left-[80px]"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: showSplash ? 0 : 1, scale: showSplash ? 0.8 : 1 }}
-            transition={{ delay: 3.4, duration: 0.6 }}
+            transition={{ delay: 2.4, duration: 0.6 }}
           >
             <StickerCluster />
           </motion.div>
