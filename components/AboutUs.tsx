@@ -66,6 +66,7 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           
           {/* Left Column - Text Content */}
+<<<<<<< HEAD
           <motion.div 
             className="space-y-8"
             initial="hidden"
@@ -73,14 +74,21 @@ export default function AboutUs() {
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
+=======
+          <div className="space-y-8 ">
+>>>>>>> ec6e7d1 (Fix StickerCluster)
             {/* About Us Title */}
             <motion.div className="inline-block" variants={fadeInUp}>
               <div className="relative">
+<<<<<<< HEAD
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-[#a3e635] z-[10] to-[#84cc16] rounded-2xl transform -rotate-4"
                   whileHover={{ rotate: -6, scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 ></motion.div>
+=======
+                <div className="absolute inset-0 bg-gradient-to-r from-[#c4fb6a] z-[10] to-[#bff66c] rounded-2xl transform -rotate-4"></div>
+>>>>>>> ec6e7d1 (Fix StickerCluster)
                 <h2 className="relative px-6 py-3 text-4xl md:text-5xl z-[10] font-black uppercase text-[#0ea5e9] transform -rotate-4">
                   ABOUT
                 </h2>
