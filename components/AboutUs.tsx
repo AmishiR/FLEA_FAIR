@@ -205,8 +205,8 @@ export default function AboutUs() {
               <img src="/hero2.png" className="w-full h-full object-cover" />
             </motion.div>
 
-            <motion.div className="bg-white h-32 sm:h-40 md:h-48 flex items-center justify-center" variants={scaleIn}>
-              <img src="/image.png" className="w-full h-full object-contain" />
+            <motion.div className=" h-32 sm:h-40 md:h-48 flex items-center justify-center" variants={scaleIn}>
+              <img src="/grid logo.png" className="w-full h-full object-contain" />
             </motion.div>
 
             <motion.div className="h-32 sm:h-40 md:h-48 overflow-hidden rounded-tr-3xl" variants={scaleIn}>
