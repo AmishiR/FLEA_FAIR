@@ -77,18 +77,18 @@ export default function AboutUs() {
             <motion.div className="inline-block" variants={fadeInUp}>
               <div className="relative">
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-[#a3e635] to-[#84cc16] rounded-2xl transform -rotate-4 z-[10]"
+                  className="absolute inset-0 bg-linear-to-r from-[#a3e635] to-[#84cc16] rounded-2xl transform -rotate-4 z-10"
                   whileHover={{ rotate: -6, scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 />
-                <h2 className="relative px-6 py-3 text-4xl md:text-5xl font-black uppercase text-[#0ea5e9] transform -rotate-4 z-[10]">
+                <h2 className="relative px-6 py-3 text-4xl md:text-5xl font-black uppercase text-[#0ea5e9] transform -rotate-4 z-10">
                   ABOUT
                 </h2>
               </div>
 
               <div className="relative -mt-3 ml-20">
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-[#ef4444] to-[#dc2626] rounded-2xl transform rotate-3"
+                  className="absolute inset-0 bg-linear-to-r from-[#ef4444] to-[#dc2626] rounded-2xl transform rotate-3"
                   whileHover={{ rotate: 5, scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 />
@@ -123,7 +123,7 @@ export default function AboutUs() {
                   href="https://instagram.com/thefleafair"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-linear-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center"
                   variants={scaleIn}
                   whileHover={{ scale: 1.15, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}

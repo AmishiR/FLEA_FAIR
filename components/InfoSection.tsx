@@ -19,7 +19,6 @@ const InfoSection: React.FC = () => {
           className="w-full h-auto drop-shadow-xl transform -rotate-2 rounded-xl"
         />
 
-        <div className="absolute -top-4 -left-4 text-brand-purple text-4xl animate-bounce">✨</div>
         <div className="absolute bottom-4 -right-4 text-brand-purple text-4xl">=</div>
       </div>
 
