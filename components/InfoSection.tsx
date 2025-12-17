@@ -14,12 +14,12 @@ const InfoSection: React.FC = () => {
       {/* Pink Badge Image */}
       <div className="w-full text-[#5a108a] max-w-md relative group cursor-pointer hover:scale-105 transition-transform duration-300">
         <img
-          src="/smallbusiness.png"
+          src="/SMALL_BUISNESS.png"
           alt="Small Business Badge"
           className="w-full h-auto drop-shadow-xl transform -rotate-2 rounded-xl"
         />
+        <p className="font-benoru">Benoru text</p>
 
-        <div className="absolute bottom-4 -right-4 text-brand-purple text-4xl">=</div>
       </div>
 
       {/* Description */}

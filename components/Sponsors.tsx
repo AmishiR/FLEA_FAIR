@@ -25,25 +25,25 @@ const Sponsors: React.FC = () => {
         <img 
           src="/cadence.png"
           alt="Cadence Academy"
-          className="w-32 md:w-40 opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+          className="w-32 md:w-40"
         />
 
         <img 
           src="/ktm.png"
           alt="KTM"
-          className="w-24 md:w-32 opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+          className="w-24 md:w-32   "
         />
 
         <img 
           src="/sunrise.webp"
           alt="Sunrise Farms"
-          className="w-32 md:w-40 opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+          className="w-32 md:w-40 "
         />
 
         <img 
           src="/TicketWings-Light.svg"
           alt="Ticketwings"
-          className="w-32 md:w-40 opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+          className="w-32 md:w-40 "
         />
 
       </div>
