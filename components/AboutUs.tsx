@@ -70,37 +70,60 @@ export default function AboutUs() {
             className="space-y-8"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
             {/* Title */}
-            <motion.div className="inline-block" variants={fadeInUp}>
+            <div className="inline-block">
+              {/* ABOUT */}
               <div className="relative">
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-[#a3e635] to-[#84cc16] rounded-2xl transform -rotate-4 z-10"
+                  initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                  whileInView={{ opacity: 1, scale: 1, rotate: -4 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                   whileHover={{ rotate: -6, scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
                 />
-                <h2 className="relative px-6 py-3 text-4xl md:text-5xl font-black uppercase text-[#0ea5e9] transform -rotate-4 z-10">
+                <motion.h2 
+                  className="relative px-6 py-3 text-4xl md:text-5xl font-benoru uppercase text-[#0ea5e9] transform -rotate-4 z-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   ABOUT
-                </h2>
+                </motion.h2>
               </div>
 
+              {/* US */}
               <div className="relative -mt-3 ml-20">
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-[#ef4444] to-[#dc2626] rounded-2xl transform rotate-3"
+                  initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+                  whileInView={{ opacity: 1, scale: 1, rotate: 3 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                   whileHover={{ rotate: 5, scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
                 />
-                <h2 className="relative px-6 py-3 text-4xl md:text-5xl font-black uppercase text-[#fbbf24] transform rotate-3">
+                <motion.h2 
+                  className="relative px-6 py-3 pl-13 text-4xl md:text-5xl font-benoru uppercase text-[#fbbf24] transform rotate-3"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                >
                   US
-                </h2>
+                </motion.h2>
               </div>
-            </motion.div>
+            </div>
 
             {/* Description */}
             <motion.div
               className="space-y-6 text-[#5b21b6] leading-relaxed"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
               variants={fadeInUp}
             >
               <p className="text-base md:text-lg">
@@ -113,7 +136,13 @@ export default function AboutUs() {
             </motion.div>
 
             {/* Socials */}
-            <motion.div className="space-y-4" variants={fadeInUp}>
+            <motion.div 
+              className="space-y-4" 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={fadeInUp}
+            >
               <h3 className="text-xl md:text-2xl font-black uppercase text-[#5b21b6]">
                 FOLLOW US ON SOCIALS
               </h3>
@@ -163,7 +192,7 @@ export default function AboutUs() {
             className="grid grid-cols-3 gap-3 md:gap-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
             <motion.div className="bg-[#0ea5e9] h-32 sm:h-40 md:h-48 rounded-tr-[60px]" variants={rotateIn} />
