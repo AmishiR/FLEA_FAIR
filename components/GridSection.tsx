@@ -1,7 +1,8 @@
 import React from 'react';
 import CityCard from './CityCard';
+import { CityEvent } from './types';
 
-const CITIES = [
+const CITIES: CityEvent[] = [
   { id: 1, name: "Jaipur", image: "/jaipur.jpg", status: 'active' },
   { id: 2, name: "Nagpur", image: "/nagpur.avif", status: 'active' },
   { id: 3, name: "Ahmedabad", image: "/ahmedabad.jpeg", status: 'coming-soon' },
