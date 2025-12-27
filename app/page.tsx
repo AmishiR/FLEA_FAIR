@@ -143,7 +143,13 @@ export default function Page() {
         )}
       </AnimatePresence>
 
-      <div className="min-h-screen w-full flex flex-col bg-[#F8F7F5] text-slate-900 font-sans selection:bg-brand-pink selection:text-white relative">
+      {/* 
+        UPDATED: Added 'overflow-x-hidden' to this main wrapper.
+        This prevents horizontal scrolling caused by the Hero background 
+        or large text/logos extending beyond the viewport width.
+      */}
+      <div className="min-h-screen w-full flex flex-col bg-[#F8F7F5] text-slate-900 font-sans selection:bg-brand-pink selection:text-white relative overflow-x-hidden">
+        
         {/* Marquee - no animation needed as it's already animated */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -162,72 +168,68 @@ export default function Page() {
           <Navbar />
         </motion.div>
         
+        <main className="grow relative flex flex-col items-center md:items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6 md:px-8">
 
-        <main className="grow relative flex flex-col items-center md:items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
+          {/* 1. LOGO – always at top */}
+          <motion.div
+            className="z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: showSplash ? 0 : 1, x: showSplash ? -60 : 0 }}
+            transition={{ delay: 2.2, duration: 0.7 }}
+          >
+            <FleaFairLogo />
+          </motion.div>
 
-  {/* 1. LOGO – always at top */}
-  <motion.div
-    className="z-50"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: showSplash ? 0 : 1, x: showSplash ? -60 : 0 }}
-    transition={{ delay: 2.2, duration: 0.7 }}
-  >
-    <FleaFairLogo />
-  </motion.div>
+          {/* 2. STICKER CLUSTER */}
+          <motion.div
+            className="
+              relative
+              w-full
+              max-w-md
+              md:max-w-xl
+              mt-3
+              md:mt-0
+              z-30
+              md:absolute
+              md:bottom-[20%]
+              md:left-[3%]
 
-  {/* 2. STICKER CLUSTER – ADD IT HERE */}
-  <motion.div
-  className="
-    relative
-    w-full
-    max-w-md
-    md:max-w-xl
-    mt-3
-    md:mt-0
-    z-30
-    md:absolute
-    md:bottom-[20%]
-    md:left-[3%]
+              scale-60
+              sm:scale-75
+              md:scale-85
+              lg:scale-95
+              xl:scale-100
 
-    scale-60
-    sm:scale-75
-    md:scale-85
-    lg:scale-95
-    xl:scale-100
+              mb-16          
+              sm:mb-20
+              md:mb-0        
+            "
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{
+              opacity: showSplash ? 0 : 1,
+              scale: showSplash ? 0.6 : 1,
+            }}
+            transition={{ delay: 2.4, duration: 0.6 }}
+          >
+            <StickerCluster />
+          </motion.div>
 
-    mb-16          /* extra space on small / short screens */
-    sm:mb-20
-    md:mb-0        /* remove margin when it becomes absolute */
-  "
-  initial={{ opacity: 0, scale: 0.6 }}
-  animate={{
-    opacity: showSplash ? 0 : 1,
-    scale: showSplash ? 0.6 : 1,
-  }}
-  transition={{ delay: 2.4, duration: 0.6 }}
->
-  <StickerCluster />
-</motion.div>
+          {/* 3. HERO SECTION */}
+          <motion.div
+            className="w-full mt-10 md:mt-20 relative z-20 flex justify-center items-center lg:justify-start"
+            variants={heroBounce}
+            initial="hidden"
+            animate={showSplash ? 'hidden' : 'visible'}
+          >
+            <HeroSection />
+          </motion.div>
 
-
-
-
-  {/* 3. HERO SECTION – comes AFTER stickers */}
-  <motion.div
-    className="w-full mt-10 md:mt-20 relative z-20 flex justify-center items-center lg:justify-start"
-    variants={heroBounce}
-    initial="hidden"
-    animate={showSplash ? 'hidden' : 'visible'}
-  >
-    <HeroSection />
-  </motion.div>
-
-</main>
+        </main>
 
 
-        {/* Second Section with stagger animation */}
+        {/* Second Section */}
         <motion.div 
-          className="min-h-screen bg-[#F8F7F5] font-sans pb-12 sm:pb-16 md:pb-20 mt-16 sm:mt-24 md:mt-32"
+          className="min-h-screen bg-[#F8F7F5] font-sans pb-12 sm:pb-16 md:pb-20 mt-4 sm:mt-8 md:mt-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -306,7 +308,6 @@ export default function Page() {
                         }}
                       />
                       
-                      {/* SVG for custom clip path shape */}
                       <svg className="absolute w-0 h-0" width="0" height="0">
                         <defs>
                           <clipPath id="founder-shape-mobile" clipPathUnits="objectBoundingBox">
@@ -355,7 +356,7 @@ export default function Page() {
                   </div>
                 </div>
                 
-                {/* Desktop Layout - Custom responsive version */}
+                {/* Desktop Layout */}
                 <div className="hidden md:block relative py-20 overflow-visible">
                   <div className="absolute top-1/2 transform -translate-y-1/2 bg-[#60C0FF] left-0 w-[98%] h-[380px] rounded-r-[120px] rounded-l-[30px] z-0"></div>
                   
@@ -403,7 +404,6 @@ export default function Page() {
                       }}
                     />
                     
-                    {/* SVG for custom clip path shape */}
                     <svg className="absolute w-0 h-0" width="0" height="0">
                       <defs>
                         <clipPath id="founder-shape-desktop" clipPathUnits="objectBoundingBox">

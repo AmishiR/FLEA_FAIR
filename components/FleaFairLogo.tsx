@@ -10,7 +10,9 @@ export const FleaFairLogo: React.FC = () => {
         width={1500}
         height={450}
         priority
-        className="max-w-full h-auto"
+        className="max-w-full h-auto
+        
+        md:max-w-full      /* Ensure it fits within desktop screen */"
       />
     </section>
   );
