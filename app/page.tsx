@@ -12,6 +12,7 @@ import Sponsors from '../components/Sponsors';
 import Dot from '../components/Dot';
 import InfoSection from '../components/InfoSection';
 import GridSection from '../components/GridSection';
+import FoodMusicHero from '../components/FoodMusicHero';
 
 // Animation variants
 const fadeInUp = {
@@ -160,37 +161,69 @@ export default function Page() {
         >
           <Navbar />
         </motion.div>
+        
 
-        <main className="grow relative flex flex-col items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
-          {/* Logo with slide in from left */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: showSplash ? 0 : 1, x: showSplash ? -60 : 0 }}
-            transition={{ delay: 2.2, duration: 0.7 }}
-          >
-            <FleaFairLogo />
-          </motion.div>
+        <main className="grow relative flex flex-col items-center md:items-start justify-start pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
 
-          {/* Sticker Cluster with scale animation */}
-          <motion.div 
-            className="relative w-full mt-5 sm:mt-50 md:mt-8 z-30 md:absolute md:bottom-[250px] md:left-[80px]"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: showSplash ? 0 : 1, scale: showSplash ? 0.8 : 1 }}
-            transition={{ delay: 2.4, duration: 0.6 }}
-          >
-            <StickerCluster />
-          </motion.div>
+  {/* 1. LOGO – always at top */}
+  <motion.div
+    className="z-50"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: showSplash ? 0 : 1, x: showSplash ? -60 : 0 }}
+    transition={{ delay: 2.2, duration: 0.7 }}
+  >
+    <FleaFairLogo />
+  </motion.div>
 
-          {/* Hero Section with bounce animation */}
-          <motion.div
-            className="w-full mt-6 sm:mt-8 md:mt-10 relative z-20 flex justify-center items-center lg:block lg:justify-start lg:items-start"
-            variants={heroBounce}
-            initial="hidden"
-            animate={showSplash ? "hidden" : "visible"}
-          >
-            <HeroSection />
-          </motion.div>
-        </main>
+  {/* 2. STICKER CLUSTER – ADD IT HERE */}
+  <motion.div
+  className="
+    relative
+    w-full
+    max-w-md
+    md:max-w-xl
+    mt-3
+    md:mt-0
+    z-30
+    md:absolute
+    md:bottom-[20%]
+    md:left-[3%]
+
+    scale-60
+    sm:scale-75
+    md:scale-85
+    lg:scale-95
+    xl:scale-100
+
+    mb-16          /* extra space on small / short screens */
+    sm:mb-20
+    md:mb-0        /* remove margin when it becomes absolute */
+  "
+  initial={{ opacity: 0, scale: 0.6 }}
+  animate={{
+    opacity: showSplash ? 0 : 1,
+    scale: showSplash ? 0.6 : 1,
+  }}
+  transition={{ delay: 2.4, duration: 0.6 }}
+>
+  <StickerCluster />
+</motion.div>
+
+
+
+
+  {/* 3. HERO SECTION – comes AFTER stickers */}
+  <motion.div
+    className="w-full mt-10 md:mt-20 relative z-20 flex justify-center items-center lg:justify-start"
+    variants={heroBounce}
+    initial="hidden"
+    animate={showSplash ? 'hidden' : 'visible'}
+  >
+    <HeroSection />
+  </motion.div>
+
+</main>
+
 
         {/* Second Section with stagger animation */}
         <motion.div 

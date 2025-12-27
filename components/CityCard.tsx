@@ -1,5 +1,5 @@
 import React from 'react';
-import { CityEvent } from '../types';
+import { CityEvent } from './types';
 
 interface CityCardProps {
   city: CityEvent;
@@ -11,7 +11,7 @@ const CityCard: React.FC<CityCardProps> = ({ city }) => {
   return (
     <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg group cursor-pointer">
       {/* Background Image */}
-      <div className={`absolute inset-0 bg-gray-200 transition-all duration-500 ease-in-out ${isGrayscale ? 'grayscale group-hover:grayscale-0' : ''}`}>
+      <div className={`absolute inset-0 bg-gray-200 transition-all duration-500 ease-in-out ${isGrayscale ? 'grayscale' : ''}`}>
          <img 
             src={city.image} 
             alt={city.name}
@@ -22,16 +22,31 @@ const CityCard: React.FC<CityCardProps> = ({ city }) => {
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
 
+      {/* Date Badge - Top Left */}
+      {city.date && (
+        <div className="absolute top-4 left-4 z-20">
+          <span className={`${
+            city.status === 'active' 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-yellow-500 text-black'
+          } text-xs md:text-sm font-extrabold px-4 py-2 rounded-2xl uppercase tracking-wider shadow-2xl border-2 ${
+            city.status === 'active' 
+              ? 'border-blue-700' 
+              : 'border-yellow-600'
+          }`}>
+            {city.date}
+          </span>
+        </div>
+      )}
 
-
-       {/* Optional Top Location Tag */}
-       {city.locationLabel && (
+      {/* Optional Top Location Tag */}
+      {city.locationLabel && (
         <div className="absolute top-4 right-12 z-10">
            <span className="bg-white/90 text-brand-purple text-[0.6rem] md:text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide shadow-sm backdrop-blur-sm">
             {city.locationLabel}
           </span>
         </div>
-       )}
+      )}
 
       {/* Instagram Icon */}
       

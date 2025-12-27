@@ -2,13 +2,12 @@ import React from 'react';
 import CityCard from './CityCard';
 
 const CITIES = [
-  { id: 1, name: "Jaipur", image: "/jaipur.jpg" },
-  { id: 2, name: "Nagpur", image: "/nagpur.avif" },
-  { id: 3, name: "Ahmedabad", image: "/ahmedabad.jpeg" },
-  { id: 4, name: "Pune", image: "/pune.webp" },
-  {id: 5, name: "Raipur", image: "/Raipur.png" , offsetY: "translate-y-4" },
-  {id: 6, name: "Indore", image: "/indore.webp" },
-  
+  { id: 1, name: "Jaipur", image: "/jaipur.jpg", status: 'active' },
+  { id: 2, name: "Nagpur", image: "/nagpur.avif", status: 'active' },
+  { id: 3, name: "Ahmedabad", image: "/ahmedabad.jpeg", status: 'coming-soon' },
+  { id: 4, name: "Pune", image: "/pune.webp", status: 'coming-soon' },
+  { id: 5, name: "Raipur", image: "/Raipur.png", offsetY: "translate-y-4", status: 'coming-soon' },
+  { id: 6, name: "Indore", image: "/indore.webp", status: 'coming-soon' },
 ];
 
 const GridSection: React.FC = () => {

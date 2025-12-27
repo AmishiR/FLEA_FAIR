@@ -4,13 +4,13 @@ import React from 'react';
 const Sponsors: React.FC = () => {
   return (
     <section className="text-center py-8 px-4">
-         <h2 className="text-10xl md:text-8xl font-black text-brand-purple uppercase tracking-tighter mb-15"> 
-            The Flea Fair Sponsors 
-         </h2>
+         <h2 className="text-[47px] font-black text-[#5a108a] uppercase tracking-tighter mb-12 leading-[1.2]">
+  The Flea Fair Sponsors
+</h2>
 
       {/* Main Sponsor */}
       <div className="flex justify-center mb-12">
-        <div className="max-w-[450px] w-full">
+        <div className="max-w-[300px] w-full">
           <img 
             src="/raisoni.png"
             alt="Raisoni Education"
@@ -35,13 +35,13 @@ const Sponsors: React.FC = () => {
         />
 
         <img 
-          src="/sunrise.webp"
+          src="/sunrise.png"
           alt="Sunrise Farms"
           className="w-32 md:w-40 "
         />
 
         <img 
-          src="/TicketWings-Light.svg"
+          src="/ticketwings.png"
           alt="Ticketwings"
           className="w-32 md:w-40 "
         />

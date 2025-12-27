@@ -107,17 +107,22 @@ const InfoSection: React.FC = () => {
             whileHover={{ scale: 1.1 }}
           >
             {/* Number with outline effect */}
+            {/* Number with outline effect */}
+                        {/* Number with outline effect */}
             <span
-              className="relative text-5xl md:text-6xl font-extrabold text-[#5a108a]"
+              className="relative text-6xl md:text-7xl font-black"
               style={{
-                WebkitTextStroke: "3px #3a0a45",
                 color: "#ffffff",
-                textShadow: "2px 2px 2px rgba(58, 10, 69, 0.6)",
+                WebkitTextStroke: "3px #5a108a",
+                textShadow: "0px 5px 0px #5a108a, 0px 7px 10px rgba(90, 16, 138, 0.3)",
+                fontFamily: "Impact, 'Arial Black', sans-serif",
+                letterSpacing: "0.05em",
+                transform: "scaleY(1.05) rotate(-2deg)",
+                display: "inline-block"
               }}
             >
               {stat.value}
             </span>
-
             {/* Label */}
             <span className="text-sm md:text-base font-semibold text-[#5a108a] mt-2 text-center uppercase">
               {stat.label}

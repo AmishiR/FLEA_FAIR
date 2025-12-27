@@ -174,7 +174,7 @@ export default function Page() {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
         >
-          <div className="w-full max-w-[2000px]">
+          <div className="w-full max-w-[500px]">
             {/* Responsive Founder's Note */}
             <div className="relative">
               {/* Mobile Layout - Stacked */}
