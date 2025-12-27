@@ -65,7 +65,7 @@ export const HeroSection: React.FC = () => {
         }}
       >
         <Image
-          src="/hero1.png"
+          src="/hero.png"
           alt="Hero Image 1"
           width={569}
           height={569}
